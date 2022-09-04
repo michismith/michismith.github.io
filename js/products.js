@@ -2,7 +2,7 @@ const ORDER_ASC_BY_NAME = "AZ";
 const ORDER_DESC_BY_NAME = "ZA";
 const ORDER_ASC_BY_PRICE = "$->$$";
 const ORDER_DESC_BY_PRICE = "$$->$";
-const ORDER_BY_SOLD_COUNT ="Cant.";
+const ORDER_BY_SOLD_COUNT ="Rel.";
 
 
 let sortCriteria = undefined;
@@ -29,7 +29,7 @@ function showOrder(criterio, array){
         FiltroArray = array.reverse((a,b) => {return a.cost - b.cost})
     }
     if (criterio === ORDER_BY_SOLD_COUNT){
-        FiltroArray = array.sort((a,b) => {return a.soldCount - b.soldCount})
+        FiltroArray = array.sort((b,a) => {return a.soldCount - b.soldCount})
     }
 
     document.getElementById("cat-list-container").innerHTML = ""
