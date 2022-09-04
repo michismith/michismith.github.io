@@ -31,6 +31,7 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <a href="login.html" ><button id="User" class="btn btn-light">Login</button></a>
           </li>
         </ul>
       </div>
@@ -41,7 +42,52 @@
   <main class="pb-5 container">
     <div class="text-center p-4">
       <h2>Productos</h2>
-      <p class="lead">Verás aquí todos los productos de la categoría Autos.</p>
+      <p class="lead">Verás aquí todos los productos de la categoría <strong id="cat-name"></strong>.</p>
+    </div>
+
+     <!--filtros-->
+    <div class="row">
+      <div class="col text-end">
+        <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+
+          <input type="radio" class="btn-check" name="options" id="sortAsc">
+          <label class="btn btn-light" for="sortAsc">A-Z</label>
+
+          <input type="radio" class="btn-check" name="options" id="sortDesc">
+          <label class="btn btn-light" for="sortDesc">Z-A</label>
+
+          <input type="radio" class="btn-check" name="options" id="sortAscPrice">
+          <label class="btn btn-light" for="sortAscPrice">$->$$</label>
+
+          <input type="radio" class="btn-check" name="options" id="sortDescPrice">
+          <label class="btn btn-light" for="sortDescPrice">$$->$</label>
+
+          <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+          <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+        <div class="row container p-0 m-0">
+          <div class="col">
+            <p class="font-weight-normal text-end my-2">Precio</p>
+          </div>
+          <div class="col">
+            <input class="form-control" type="number" placeholder="min." id="rangePriceFilterCountMin">
+          </div>
+          <div class="col">
+            <input class="form-control" type="number" placeholder="máx." id="rangePriceFilterCountMax">
+          </div>
+          <div class="col-3 p-0">
+            <div class="btn-group" role="group">
+              <button class="btn btn-light btn-block" id="rangePriceFilterCount">Filtrar</button>
+              <button class="btn btn-link btn-sm" id="clearRangePriceFilter">Limpiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="row">

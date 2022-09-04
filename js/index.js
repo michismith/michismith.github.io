@@ -11,4 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
         localStorage.setItem("catID", 103);
         window.location = "products.html"
     });
+
+    if(localStorage.getItem('UserLog') != undefined){
+    document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
+    }
 });

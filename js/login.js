@@ -6,6 +6,7 @@ document.getElementById("ok").addEventListener("click", function () {
   const password = document.getElementById("password").value;
 
   if (email && password) {
+    localStorage.setItem('UserLog', email)
     window.location = "index.html";
   } else {
     window.location = "login.html";

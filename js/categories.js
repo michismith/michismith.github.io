@@ -141,3 +141,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+
+//login
+if(localStorage.getItem('UserLog') != undefined){
+    document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
+    }

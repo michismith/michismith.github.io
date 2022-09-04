@@ -147,3 +147,8 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 });
+
+//login
+if(localStorage.getItem('UserLog') != undefined){
+    document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
+    }
