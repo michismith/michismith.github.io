@@ -4,16 +4,18 @@ document.getElementById("ok").addEventListener("click", function () {
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  
+  
 
   if (email && password) {
-    localStorage.setItem('UserLog', email)
+    var email_analizado = /^([^]+)@(\w+).(\w+)$/.exec(email);
+    localStorage.setItem('UserLog',email_analizado[1])
     window.location = "index.html";
   } else {
     window.location = "login.html";
   }
 
 })
-
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();

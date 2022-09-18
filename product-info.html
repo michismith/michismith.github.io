@@ -31,6 +31,7 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <a href="login.html" ><button id="User" class="btn btn-light">Login</button></a>
           </li>
         </ul>
       </div>
@@ -38,11 +39,72 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <br><br>
+      <!-- prod info list -->
+      <div class="row">
+        <div class="col-7" id="prod-info">
+          <!--<p class="m-0"><strong>Precio</strong></p>
+            <p id="productInPrice"></p>
+            <p class="m-0"><strong>Descripción</strong></p>
+            <p id="productInDescription"> Agregar descripción</p>
+            <p class="m-0"><strong>Categoría</strong></p>
+            <p id="productInCategory"></p>
+            <p class="m-0"><strong>Cantidad de vendidos</strong></p>
+            <p id="productInSoldcount"></p>-->
+        </div>
+      </div>
+    </div>
+    <!-- images-->
+    <div class="container">
+      <div class="row">
+        <div>
+          <p><strong>Imágenes ilustrativas</strong></p>
+        </div>
+      </div>
+      <div id="prod-container"></div>
+      <div class="divider d-flex align-items-center my-4"></div>
+    </div>
+
+    <!-- comentario-->
+    <div class="container">
+      <div class="row">
+        <div>
+          <p class="m-0"><strong>Comentarios</strong></p>
+          <p id="comment"></p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- comment box-->
+    <div class="container">
+      <div class="row">
+        <div class="row mt-4 g-3">
+          <div class="col-sm-4">
+            <p class="m-0"><strong>Comentar</strong></p>
+            <label for="tuOpinion" class="form-label">Tu opinión:</label>
+            <textarea type="text" class="form-control" id="tuOpinion"></textarea>
+            <br>
+            <div>
+              <label for="stars">Tu puntuación</label>
+              <select id="stars" name="stars">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary my-3" id="enviar">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

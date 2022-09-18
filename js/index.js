@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 
+    
     if(localStorage.getItem('UserLog') != undefined){
     document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
+
     }
 });
