@@ -30,40 +30,46 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-            <a href="login.html" ><button id="User" class="btn btn-light">Login</button></a>
-          </li>
+
+          /dropdown login
+          <div class="dropdown">
+            <button class="dropbtn dropdown-toggle" id="User"></button>
+            <div class="dropdown-content">
+              <a href="cart.html">Mi carrito</a>
+              <a href="my-profile.html">Mi perfil</a>
+              <a>
+                <hr class="dropdown-divider">
+              </a>
+              <a onclick="cerrarSes()">Cerrar sesión</a>
+            </div>
+          </div>
+
         </ul>
       </div>
     </div>
   </nav>
+  
   <main>
     <div class="container">
       <br><br>
+
       <!-- prod info list -->
       <div class="row">
-        <div class="col-7" id="prod-info">
-          <!--<p class="m-0"><strong>Precio</strong></p>
-            <p id="productInPrice"></p>
-            <p class="m-0"><strong>Descripción</strong></p>
-            <p id="productInDescription"> Agregar descripción</p>
-            <p class="m-0"><strong>Categoría</strong></p>
-            <p id="productInCategory"></p>
-            <p class="m-0"><strong>Cantidad de vendidos</strong></p>
-            <p id="productInSoldcount"></p>-->
+        <div id="prod-info">
         </div>
       </div>
     </div>
+
     <!-- images-->
     <div class="container">
-      <div class="row">
+      <div class="m-0">
         <div>
           <p><strong>Imágenes ilustrativas</strong></p>
         </div>
       </div>
       <div id="prod-container"></div>
       <div class="divider d-flex align-items-center my-4"></div>
-    </div>
+    
 
     <!-- comentario-->
     <div class="container">
@@ -103,6 +109,18 @@
         </div>
       </div>
     </div>
+    <div class="divider d-flex align-items-center my-4"></div>
+
+    <!-- related prod -->
+    <div>
+      <div>
+        <p class="m-0 text-center"><strong> Productos relacionados </strong></p>
+        <br>
+        <div class="container" id="relateProd">
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer class="text-muted">

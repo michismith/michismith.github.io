@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
@@ -13,8 +14,18 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     
-    if(localStorage.getItem('UserLog') != undefined){
+    //login
+ if(localStorage.getItem('UserLog') != undefined){
     document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
-
-    }
+    } else{
+        window.location = "login.html"
+    };
+ 
 });
+
+//cerrar sesion
+ function cerrarSes(){
+    localStorage.removeItem('UserLog');
+    window.location = "login.html"
+
+};

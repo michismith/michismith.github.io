@@ -152,3 +152,10 @@ document.addEventListener("DOMContentLoaded", function(e){
 if(localStorage.getItem('UserLog') != undefined){
     document.getElementById("User").innerHTML = localStorage.getItem('UserLog');
     }
+
+//cerrar sesion
+function cerrarSes(){
+    localStorage.removeItem('UserLog');
+    window.location = "login.html"
+
+};
