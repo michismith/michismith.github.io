@@ -54,7 +54,7 @@
       <br><br>
 
       <!-- prod info list -->
-      <div class="row">
+      <div>
         <div id="prod-info">
         </div>
       </div>
@@ -62,12 +62,13 @@
 
     <!-- images-->
     <div class="container">
-      <div class="m-0">
+      <div class="row">
         <div>
           <p><strong>Imágenes ilustrativas</strong></p>
         </div>
       </div>
       <div id="prod-container"></div>
+      <br><br>
       <div class="divider d-flex align-items-center my-4"></div>
     
 
@@ -75,23 +76,24 @@
     <div class="container">
       <div class="row">
         <div>
-          <p class="m-0"><strong>Comentarios</strong></p>
+          <p><strong>Comentarios</strong></p>
           <p id="comment"></p>
         </div>
       </div>
     </div>
 
+    <br><br>
 
     <!-- comment box-->
     <div class="container">
       <div class="row">
-        <div class="row mt-4 g-3">
-          <div class="col-sm-4">
+        
+          <div >
             <p class="m-0"><strong>Comentar</strong></p>
             <label for="tuOpinion" class="form-label">Tu opinión:</label>
             <textarea type="text" class="form-control" id="tuOpinion"></textarea>
             <br>
-            <div>
+            
               <label for="stars">Tu puntuación</label>
               <select id="stars" name="stars">
                 <option value="1" selected>1</option>
@@ -101,9 +103,11 @@
                 <option value="5">5</option>
               </select>
 
+              <div class="col-sm-4">
               <div class="d-grid">
                 <button type="button" class="btn btn-primary my-3" id="enviar">Enviar</button>
               </div>
+            </div>
             </div>
           </div>
         </div>

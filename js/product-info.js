@@ -29,11 +29,13 @@ function showProduct() {
     let htmlShowInfo = "";
     htmlShowInfo +=`
             <div class="row">
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div class="mb-1">
-                        <h1>` +productInfo.name +`</h1>  
-                        <div class="divider d-flex align-items-center my-4"></div>
+                      
+                        <h1>
+                        <span class="m-3">` +productInfo.name +`</span>
+                        <button type="button" class="btn btn-primary m-4" onclick="setBuyProduct(${productInfo.id})">Comprar</button>
+                        </h1>
+                        <div class="divider d-flex align-items-center "></div>
+                        <br> 
                         <p class="m-0"><strong>Precio</strong></p>
                         <p> ` +productInfo.currency +" " +productInfo.cost +`</p> 
                         <p class="m-0"><strong>Descripción</strong></p>
@@ -42,14 +44,15 @@ function showProduct() {
                         <p> ` +productInfo.category +`</p> 
                         <p class="m-0"><strong>Cantidad de vendidos</strong></p>
                         <p> ` +productInfo.soldCount +`</p> 
-                        </div>
-                    </div>
-                </div>
             </div> `;
 
     document.getElementById("prod-info").innerHTML = htmlShowInfo;
 }
 
+function setBuyProduct(id) {
+  localStorage.setItem("prodBuyID", id);
+  window.location = "cart.html";
+}
 
 function showProductImage() {
     let htmlShow = "";
@@ -154,3 +157,4 @@ function cerrarSes() {
     localStorage.removeItem("UserLog");
     window.location = "login.html";
 }
+
