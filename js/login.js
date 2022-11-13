@@ -10,6 +10,7 @@ document.getElementById("ok").addEventListener("click", function () {
   if (email && password) {
     var email_analizado = /^([^]+)@(\w+).(\w+)$/.exec(email);
     localStorage.setItem('UserLog',email_analizado[1])
+    localStorage.setItem('userEmail',email)
     window.location = "index.html";
   } else {
     window.location = "login.html";

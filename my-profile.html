@@ -64,10 +64,64 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
+        <div class="row mt-4">
+          <div class="col">
+            <h1 class="mb-3">Perfil</h1>
+            <div id="display-image"></div>
+            <hr class="my-4">
+            <form action="#" class="row g-3 needs-validation" id="formulario" novalidate autocomplete="off">
+           
+              <div class="col-sm-6">
+                <label for="name" class="form-label">Primer nombre *</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">
+                  Ingresa un nombre
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="name2" class="form-label">Segundo nombre</label>
+                <input type="text" class="form-control" id="name2">
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Primer apellido *</label>
+                <input type="text" class="form-control" id="lastName" required>
+                <div class="invalid-feedback">
+                  Ingresa un apellido
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName2" class="form-label">Segundo apellido</label>
+                <input type="text" class="form-control" id="lastName2">
+                
+              </div>
+  
+              <div class="col-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              
+              <div class="col-sm-6">
+                <label for="number" class="form-label">Teléfono de contacto *</label>
+                <input type="number" class="form-control" id="number" required>
+                <div class="invalid-feedback">
+                  Ingresa un número de teléfono
+                </div>
+              </div>
+              
+              <label for="number" class="form-label">Imagen de perfil</label>
+              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+
+            <hr class="my-4">
+            <button class="btn btn-primary" type="submit" id="btnSubmit" >Guardar cambios</button>
+            </form>
+
+           
+
+          </div>
+        </div>
   </main>
   <footer class="text-muted">
     <div class="container">
